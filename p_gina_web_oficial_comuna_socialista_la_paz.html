@@ -1,777 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comuna Socialista La Paz | RIF: J-410244623 - Portal Oficial</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Inter & Merriweather -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'comuna-red': '#B91C1C',
-                        'comuna-red-dark': '#881337',
-                        'comuna-gold': '#D97706',
-                        'comuna-gold-light': '#FBBF24',
-                        'comuna-blue': '#1E3A8A',
-                        'comuna-blue-dark': '#0F172A',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Merriweather', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .hero-pattern {
-            background-color: #881337;
-            background-image: radial-gradient(#d97706 0.75px, transparent 0.75px), radial-gradient(#d97706 0.75px, #881337 0.75px);
-            background-size: 30px 30px;
-            background-position: 0 0,15px 15px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comuna Socialista La Paz - Estado Comunal ABYA YALA</title>
+  <style>
+    :root {
+      --primary: #8b0000;
+      --secondary: #d4af37;
+      --dark: #1a1a1a;
+      --light: #f4f4f9;
+      --accent: #003366;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), #5a0000);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom: 4px solid var(--secondary);
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: var(--secondary);
+      font-weight: bold;
+    }
+    nav {
+      background-color: var(--dark);
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: var(--secondary);
+      color: var(--dark);
+    }
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-left: 5px solid var(--primary);
+    }
+    .card h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .badge {
+      display: inline-block;
+      background-color: var(--secondary);
+      color: var(--dark);
+      padding: 4px 8px;
+      font-weight: bold;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+    .resoluciones-list {
+      list-style: none;
+    }
+    .resoluciones-list li {
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+    }
+    .resoluciones-list li:last-child {
+      border-bottom: none;
+    }
+    .resoluciones-list strong {
+      color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--dark);
+      color: white;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans leading-normal">
+<body>
 
-    <!-- Top Bar Institucional -->
-    <div class="bg-comuna-blue-dark text-slate-300 text-xs py-1.5 px-4">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center space-x-3">
-                <span class="font-semibold text-comuna-gold-light">República Bolivariana de Venezuela</span>
-                <span>|</span>
-                <span>Poder Popular y Autogestión Comunal</span>
-            </div>
-            <div class="flex items-center space-x-4">
-                <span class="bg-comuna-red px-2 py-0.5 rounded font-mono font-bold text-white">RIF: J-410244623</span>
-                <span class="hidden md:inline"><i class="fas fa-certificate text-comuna-gold mr-1"></i>Acreditación Órgano Comunal</span>
-            </div>
-        </div>
-    </div>
+  <header>
+    <h1>Comuna Socialista La Paz</h1>
+    <p>RIF: J-410244623 | Estado Comunal ABYA YALA</p>
+  </header>
 
-    <!-- Header / Banner Navbar -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur shadow-md border-b-2 border-comuna-gold">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                
-                <!-- Brand / Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-gradient-to-tr from-comuna-red to-comuna-gold rounded-full flex items-center justify-center text-white shadow-lg border-2 border-white">
-                        <i class="fas fa-users-rays text-2xl"></i>
-                    </div>
-                    <div>
-                        <h1 class="text-xl font-bold tracking-tight text-slate-900 font-serif">Comuna Socialista La Paz</h1>
-                        <p class="text-xs text-slate-500 font-medium">Gobierno Comunitario • Sistema Económico Popular</p>
-                    </div>
-                </div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#institucional">Institucional</a>
+    <a href="#resoluciones">Resoluciones CLAP</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-                <!-- Desktop Navigation Menu -->
-                <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-slate-700">
-                    <a href="#inicio" class="hover:text-comuna-red transition-colors">Inicio</a>
-                    <a href="#estructura" class="hover:text-comuna-red transition-colors">Estructura</a>
-                    <a href="#justicia" class="hover:text-comuna-red transition-colors">Justicia de Paz</a>
-                    <a href="#resoluciones" class="hover:text-comuna-red transition-colors">Resoluciones</a>
-                    <a href="#calculadora" class="hover:text-comuna-red transition-colors">Calculadora Social</a>
-                    <a href="#atencion" class="hover:text-comuna-red transition-colors">Atención Ciudadana</a>
-                </nav>
+  <div class="container">
 
-                <!-- Actions -->
-                <div class="hidden sm:flex items-center space-x-3">
-                    <a href="#atencion" class="bg-comuna-red hover:bg-comuna-red-dark text-white text-xs uppercase tracking-wider font-bold px-4 py-2.5 rounded-lg shadow hover:shadow-md transition-all flex items-center gap-2">
-                        <i class="fas fa-paper-plane"></i> Solicitud en Línea
-                    </a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="lg:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 text-sm font-semibold">
-            <a href="#inicio" class="block py-2 text-slate-700 hover:text-comuna-red">Inicio</a>
-            <a href="#estructura" class="block py-2 text-slate-700 hover:text-comuna-red">Estructura & Banco</a>
-            <a href="#justicia" class="block py-2 text-slate-700 hover:text-comuna-red">Justicia de Paz</a>
-            <a href="#resoluciones" class="block py-2 text-slate-700 hover:text-comuna-red">Visor de Resoluciones</a>
-            <a href="#calculadora" class="block py-2 text-slate-700 hover:text-comuna-red">Simulador de Proyectos</a>
-            <a href="#atencion" class="block py-2 text-slate-700 hover:text-comuna-red">Atención Ciudadana</a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="inicio" class="hero-pattern text-white relative overflow-hidden py-16 lg:py-24 border-b-4 border-comuna-gold">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 bg-comuna-gold/20 backdrop-blur border border-comuna-gold/40 text-comuna-gold-light text-xs uppercase font-bold px-3 py-1.5 rounded-full">
-                        <i class="fas fa-hand-holding-heart"></i> Autogestión • Soberanía • Poder Popular
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight font-serif">
-                        Construyendo el Modelo Económico y Social para el Bienestar Común
-                    </h2>
-                    <p class="text-base sm:text-lg text-slate-200 max-w-2xl font-light">
-                        Bienvenid@s al Portal Oficial de la <strong class="text-white font-semibold">Comuna Socialista La Paz (RIF: J-410244623)</strong>. Órgano impulsor del desarrollo socioproductivo, contraloría social y justicia de paz comunal para la transformación colectiva del territorio.
-                    </p>
-
-                    <div class="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
-                        <a href="#resoluciones" class="bg-comuna-gold hover:bg-amber-600 text-slate-900 font-bold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2 text-sm">
-                            <i class="fas fa-file-contract"></i> Consultar Resoluciones
-                        </a>
-                        <a href="#estructura" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/30 backdrop-blur transition-all flex items-center gap-2 text-sm">
-                            <i class="fas fa-sitemap"></i> Conocer Estructura
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Hero Card Counter Info -->
-                <div class="lg:col-span-5">
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-2xl text-white space-y-4">
-                        <h3 class="text-lg font-bold border-b border-white/20 pb-3 flex items-center justify-between">
-                            <span><i class="fas fa-chart-line text-comuna-gold-light mr-2"></i> Balance de Gestión</span>
-                            <span class="text-xs bg-emerald-500/30 text-emerald-300 px-2 py-0.5 rounded font-mono">2021 - 2026</span>
-                        </h3>
-                        
-                        <div class="grid grid-cols-2 gap-4 pt-2">
-                            <div class="bg-black/20 p-4 rounded-xl border border-white/10 text-center">
-                                <span class="block text-2xl lg:text-3xl font-black text-comuna-gold-light font-mono">100%</span>
-                                <span class="text-xs text-slate-300 font-medium">Contraloría Social</span>
-                            </div>
-                            <div class="bg-black/20 p-4 rounded-xl border border-white/10 text-center">
-                                <span class="block text-2xl lg:text-3xl font-black text-comuna-gold-light font-mono">CLAP</span>
-                                <span class="text-xs text-slate-300 font-medium">Soberanía Alimentaria</span>
-                            </div>
-                            <div class="bg-black/20 p-4 rounded-xl border border-white/10 text-center">
-                                <span class="block text-2xl lg:text-3xl font-black text-comuna-gold-light font-mono">Jurisdicción</span>
-                                <span class="text-xs text-slate-300 font-medium">Justicia Comunitaria</span>
-                            </div>
-                            <div class="bg-black/20 p-4 rounded-xl border border-white/10 text-center">
-                                <span class="block text-2xl lg:text-3xl font-black text-comuna-gold-light font-mono">Proyectos</span>
-                                <span class="text-xs text-slate-300 font-medium">Financiamiento Activo</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-comuna-blue/60 p-3 rounded-lg text-xs text-slate-200 flex items-start gap-2 border border-blue-400/30">
-                            <i class="fas fa-info-circle text-comuna-gold-light text-base mt-0.5"></i>
-                            <span>Las asambleas de ciudadanos constituyen la máxima instancia deliberativa y de decisión comunal.</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    <section id="inicio" class="card">
+      <span class="badge">Autogobierno Comunal</span>
+      <h2>Consejo Socialista de Economía Comunal</h2>
+      <p>Bienvenido al portal oficial de la Comuna Socialista La Paz. Espacio destinado al fortalecimiento del Poder Popular, la soberanía económica y el desarrollo endógeno participativo.</p>
     </section>
 
-    <!-- Sección: Estructura Organizativa y Unidades -->
-    <section id="estructura" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-comuna-red font-bold text-xs uppercase tracking-widest">Estructura del Poder Popular</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 font-serif mt-1">Unidades Orgánicas y Sistema de Gobierno</h2>
-                <div class="w-20 h-1 bg-comuna-gold mx-auto my-3 rounded-full"></div>
-                <p class="text-slate-600 text-sm">Garantizando la administración transparente, el desarrollo socioproductivo y el ejercicio pleno de la democracia participativa y protagónica.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Card 1: Banco de la Comuna -->
-                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-comuna-gold transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between">
-                    <div>
-                        <div class="w-14 h-14 bg-amber-100 text-comuna-gold rounded-xl flex items-center justify-center text-2xl mb-5 shadow-inner">
-                            <i class="fas fa-piggy-bank"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2 font-serif">Consejo Socialista de Economía Comunal / Banco de la Comuna</h3>
-                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
-                            Unidad encargada de la administración de fondos financieros y no financieros, otorgamiento de créditos socio-productivos y financiamiento de proyectos comunales. Impulsa la soberanía alimentaria y comercialización comunitaria.
-                        </p>
-                        <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200 pt-3">
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> Administración de Fondos de la Nación</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> Impulso de Empresas de Propiedad Social (EPS)</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> Compras de Insumos Sanitaria y Salud</li>
-                        </ul>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-200">
-                        <button onclick="showDetailsModal('banco')" class="text-xs font-bold text-comuna-red hover:text-comuna-red-dark flex items-center gap-1">
-                            LEER MÁS COMPETENCIAS <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Card 2: Justicia de Paz Comunal -->
-                <div id="justicia" class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-comuna-red transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between">
-                    <div>
-                        <div class="w-14 h-14 bg-red-100 text-comuna-red rounded-xl flex items-center justify-center text-2xl mb-5 shadow-inner">
-                            <i class="fas fa-scale-balanced"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2 font-serif">Jurisdicción Especial de Justicia de Paz Comunal</h3>
-                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
-                            Instancia orientada a la convivencia pacífica, la conciliación comunitaria y la resolución alternativa de conflictos. Promueve la armonía social y vela por la protección integral de los Derechos Humanos.
-                        </p>
-                        <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200 pt-3">
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> Conciliación y Mediación Ciudadana</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> Representación y Tutela de Derechos Indígenas</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> Promoción de Convivencia Comunitaria</li>
-                        </ul>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-200">
-                        <button onclick="showDetailsModal('justicia')" class="text-xs font-bold text-comuna-red hover:text-comuna-red-dark flex items-center gap-1">
-                            LEER MÁS COMPETENCIAS <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Card 3: Magistratura y Administración -->
-                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-comuna-blue transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between">
-                    <div>
-                        <div class="w-14 h-14 bg-blue-100 text-comuna-blue rounded-xl flex items-center justify-center text-2xl mb-5 shadow-inner">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2 font-serif">Secretaría de Magistratura y Contraloría Social</h3>
-                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
-                            Garantiza la sistematización documental, la fe pública comunitaria de los actos asamblearios, la rendición pública de cuentas y el seguimiento riguroso de la gestión comunal.
-                        </p>
-                        <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200 pt-3">
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> Registro de Actas de Asamblea Extraordinaria</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> Certificación de Libros e Historial Documental</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> Auditoría y Transparencia de Fondos</li>
-                        </ul>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-200">
-                        <button onclick="showDetailsModal('magistratura')" class="text-xs font-bold text-comuna-red hover:text-comuna-red-dark flex items-center gap-1">
-                            LEER MÁS COMPETENCIAS <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    <section id="institucional" class="card">
+      <h2>Estructura Orgánica & Jurisdicción</h2>
+      <ul>
+        <li><strong>Banco de la Comuna:</strong> Órgano de gestión financiera comunal y desarrollo socioproductivo.</li>
+        <li><strong>Jurisdicción Especial de Paz Comunal:</strong> Instancia comunitaria para la conciliación, arbitraje y convivencia pacífica.</li>
+        <li><strong>Magistratura de Economía Comunal:</strong> Secretaría de control social y regulación económica.</li>
+      </ul>
     </section>
 
-    <!-- Sección: Visor / Buscador de Resoluciones Comunitarias -->
-    <section id="resoluciones" class="py-16 bg-slate-100 border-t border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
-                <div>
-                    <span class="text-comuna-blue font-bold text-xs uppercase tracking-widest">Documentación Oficial</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-serif mt-1">Buscador y Visor de Resoluciones CLAP</h2>
-                    <p class="text-slate-600 text-sm mt-1">Consulte los documentos aprobados en Asamblea Extraordinaria por el Banco de la Comuna y sus vocerías.</p>
-                </div>
-                <!-- Search Box -->
-                <div class="w-full md:w-80">
-                    <div class="relative">
-                        <input type="text" id="search-input" onkeyup="filterResolutions()" placeholder="Buscar por tema, palabra clave o código..." class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-comuna-red focus:ring-1 focus:ring-comuna-red bg-white shadow-sm">
-                        <i class="fas fa-search absolute left-3 top-3.5 text-slate-400 text-sm"></i>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Resolution Cards Grid -->
-            <div id="resolutions-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Resolución 012 -->
-                <div class="resolution-card bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition-all">
-                    <div class="flex justify-between items-start mb-3">
-                        <span class="bg-red-100 text-comuna-red text-xs font-mono font-bold px-2.5 py-1 rounded border border-red-200">Resolución CLAP 012</span>
-                        <span class="text-xs text-slate-500 font-medium"><i class="far fa-calendar-alt mr-1"></i>21-04-2021</span>
-                    </div>
-                    <h3 class="font-bold text-slate-900 text-base mb-2 line-clamp-2">Acreditación de Secretaría & Gestión Sanitaria COVID-19</h3>
-                    <p class="text-xs text-slate-600 mb-4 line-clamp-3">
-                        Acreditación del ciudadano Marco Antonio Nieves García (C.I. V-17.004.376) como Secretario de la Magistratura de Economía Comunal y autorización para la disposición de fondos financieros de la Nación destinados a la compra e importación de vacunas e insumos médicos contra el COVID-19.
-                    </p>
-                    <div class="flex justify-between items-center pt-3 border-t border-slate-100">
-                        <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Aprobada en Asamblea</span>
-                        <button onclick="openResolutionModal('012')" class="text-xs font-bold text-comuna-blue hover:underline flex items-center gap-1">
-                            <i class="fas fa-eye"></i> Ver Detalle
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Resolución 013 -->
-                <div class="resolution-card bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition-all">
-                    <div class="flex justify-between items-start mb-3">
-                        <span class="bg-amber-100 text-comuna-gold text-xs font-mono font-bold px-2.5 py-1 rounded border border-amber-200">Resolución CLAP 013</span>
-                        <span class="text-xs text-slate-500 font-medium"><i class="far fa-calendar-alt mr-1"></i>02-05-2021</span>
-                    </div>
-                    <h3 class="font-bold text-slate-900 text-base mb-2 line-clamp-2">Jurisdicción de Paz & Mediación de Derechos Indígenas (Abya Yala)</h3>
-                    <p class="text-xs text-slate-600 mb-4 line-clamp-3">
-                        Designación del ciudadano Marco Antonio Nieves García como Juez de la Jurisdicción Especial de Justicia de Paz Comunal y otorgamiento de facultades de mediación internacional ante la República Argentina para la defensa de derechos originarios territoriales y DDHH.
-                    </p>
-                    <div class="flex justify-between items-center pt-3 border-t border-slate-100">
-                        <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Aprobada en Asamblea</span>
-                        <button onclick="openResolutionModal('013')" class="text-xs font-bold text-comuna-blue hover:underline flex items-center gap-1">
-                            <i class="fas fa-eye"></i> Ver Detalle
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Actas de Asamblea Productiva -->
-                <div class="resolution-card bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition-all">
-                    <div class="flex justify-between items-start mb-3">
-                        <span class="bg-blue-100 text-comuna-blue text-xs font-mono font-bold px-2.5 py-1 rounded border border-blue-200">Acta Comunal 008</span>
-                        <span class="text-xs text-slate-500 font-medium"><i class="far fa-calendar-alt mr-1"></i>15-11-2023</span>
-                    </div>
-                    <h3 class="font-bold text-slate-900 text-base mb-2 line-clamp-2">Aprobación del Plan de Abastecimiento Territorial y Patios Productivos</h3>
-                    <p class="text-xs text-slate-600 mb-4 line-clamp-3">
-                        Mecanismos de distribución comunitaria de alimentos y financiamiento microagrícola para el impulso de la soberanía alimentaria dentro de los polígonos del territorio comunal.
-                    </p>
-                    <div class="flex justify-between items-center pt-3 border-t border-slate-100">
-                        <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Aprobada en Asamblea</span>
-                        <button onclick="openResolutionModal('008')" class="text-xs font-bold text-comuna-blue hover:underline flex items-center gap-1">
-                            <i class="fas fa-eye"></i> Ver Detalle
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    <section id="resoluciones" class="card">
+      <h2>Resoluciones Oficiales aprobadas en Asamblea</h2>
+      <ul class="resoluciones-list">
+        <li>
+          <strong>Resolución CLAP 011:</strong> Sentencia y reorganización de la estructura de paz regional.
+        </li>
+        <li>
+          <strong>Resolución CLAP 012:</strong> Autorización para la gestión de salud, vacunas e insumos médicos, y estabilización económica comunal.
+        </li>
+        <li>
+          <strong>Resolución CLAP 013:</strong> Mediación y representación para la reivindicación de derechos de los pueblos originarios de ABYA YALA.
+        </li>
+        <li>
+          <strong>Resolución CLAP 014:</strong> Aprobación del Plan Comunal de Desarrollo y puesta en marcha de la plataforma financiera digital.
+        </li>
+      </ul>
     </section>
 
-    <!-- Sección: Calculadora y Simulador de Proyectos Comunales -->
-    <section id="calculadora" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <div class="lg:col-span-5 space-y-4">
-                    <span class="text-comuna-gold font-bold text-xs uppercase tracking-widest"><i class="fas fa-calculator mr-1"></i> Herramienta de Planificación</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 font-serif">Simulador de Estimación de Proyectos Socioproductivos</h2>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Utilice este estimador para calcular el presupuesto estimado, la cantidad de familias beneficiadas y los fondos autogestionados requeridos para proyectos comunitarios (Infraestructura, Patios Productivos, Jornadas de Salud o Alimentos).
-                    </p>
-                    <div class="p-4 bg-amber-50 border-l-4 border-comuna-gold rounded-r-lg text-xs text-amber-900 space-y-1">
-                        <span class="font-bold block">Nota de Transparencia Financiera:</span>
-                        <p>Las estimaciones son de carácter referencial y deben someterse a la aprobación final de la Asamblea de Ciudadanos y del Banco de la Comuna.</p>
-                    </div>
-                </div>
-
-                <!-- Simulating Interface Card -->
-                <div class="lg:col-span-7 bg-slate-50 border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-lg">
-                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-200 pb-3">
-                        <i class="fas fa-sliders-h text-comuna-red"></i> Configurar Parámetros del Proyecto
-                    </h3>
-
-                    <div class="space-y-5">
-                        <!-- Tipo de Proyecto -->
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Tipo de Proyecto Comunal</label>
-                            <select id="sim-type" onchange="calculateProject()" class="w-full bg-white border border-slate-300 rounded-lg p-2.5 text-sm focus:outline-none focus:border-comuna-red">
-                                <option value="agricola">Siembra y Patios Productivos (Agrícola)</option>
-                                <option value="salud">Jornada de Salud y Equipamiento Sanitario</option>
-                                <option value="infraestructura">Reparación de Vialidad o Alumbrado Público</option>
-                                <option value="alimentos">Centro de Acopio y Dist. de Alimentos CLAP</option>
-                            </select>
-                        </div>
-
-                        <!-- Alcance / Familias beneficiadas -->
-                        <div>
-                            <div class="flex justify-between items-center mb-1">
-                                <label class="text-xs font-bold text-slate-700 uppercase">Familias Beneficiadas</label>
-                                <span id="sim-families-val" class="text-xs font-bold font-mono bg-comuna-red/10 text-comuna-red px-2 py-0.5 rounded">150 Familias</span>
-                            </div>
-                            <input type="range" id="sim-families" min="20" max="1000" step="10" value="150" oninput="calculateProject()" class="w-full accent-comuna-red">
-                        </div>
-
-                        <!-- Duración en meses -->
-                        <div>
-                            <div class="flex justify-between items-center mb-1">
-                                <label class="text-xs font-bold text-slate-700 uppercase">Duración Estimada de Ejecución</label>
-                                <span id="sim-months-val" class="text-xs font-bold font-mono bg-comuna-blue/10 text-comuna-blue px-2 py-0.5 rounded">3 Meses</span>
-                            </div>
-                            <input type="range" id="sim-months" min="1" max="12" step="1" value="3" oninput="calculateProject()" class="w-full accent-comuna-blue">
-                        </div>
-
-                        <!-- Resultados Calculados -->
-                        <div class="pt-4 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-4 bg-white p-4 rounded-xl border border-slate-200">
-                            <div class="text-center">
-                                <span class="block text-xs text-slate-500 font-medium">Inversión Estimada</span>
-                                <span id="res-budget" class="text-xl font-extrabold text-comuna-red font-mono">$1,800 USD</span>
-                            </div>
-                            <div class="text-center border-y sm:border-y-0 sm:border-x border-slate-200 py-2 sm:py-0">
-                                <span class="block text-xs text-slate-500 font-medium">Costo por Familia</span>
-                                <span id="res-per-family" class="text-xl font-extrabold text-slate-800 font-mono">$12.00 USD</span>
-                            </div>
-                            <div class="text-center">
-                                <span class="block text-xs text-slate-500 font-medium">Fuerza Trabajo Local</span>
-                                <span id="res-jobs" class="text-xl font-extrabold text-comuna-gold font-mono">12 Voceros</span>
-                            </div>
-                        </div>
-
-                        <button onclick="downloadSimulationPDF()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-lg text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
-                            <i class="fas fa-file-export"></i> Pre-Registrar Idea de Proyecto
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    <section id="contacto" class="card">
+      <h2>Atención al Ciudadano</h2>
+      <p>Para solicitudes de mediación, proyectos comunitarios o consultas de asamblea, diríjase a la sede del Consejo de Economía Comunal.</p>
     </section>
 
-    <!-- Sección: Formulario de Atención Ciudadana & Solicitudes de Mediación -->
-    <section id="atencion" class="py-16 bg-slate-900 text-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <span class="text-comuna-gold-light font-bold text-xs uppercase tracking-widest"><i class="fas fa-comments mr-1"></i> Participación Directa</span>
-                <h2 class="text-3xl font-extrabold font-serif mt-1">Atención Ciudadana y Mediación de Paz</h2>
-                <p class="text-slate-300 text-sm mt-2">Envíe sus peticiones, reportes comunitarios o solicitudes de mediación ante la Jurisdicción Especial de Paz Comunal.</p>
-            </div>
+  </div>
 
-            <div class="max-w-2xl mx-auto bg-slate-800 border border-slate-700 p-6 sm:p-8 rounded-2xl shadow-2xl">
-                
-                <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Nombre Completo *</label>
-                            <input type="text" required placeholder="Ej: María Rodríguez" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-sm text-white focus:outline-none focus:border-comuna-gold">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Cédula de Identidad *</label>
-                            <input type="text" required placeholder="Ej: V-12.345.678" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-sm text-white focus:outline-none focus:border-comuna-gold">
-                        </div>
-                    </div>
+  <footer>
+    <p>&copy; Comuna Socialista La Paz — Todos los derechos reservados.</p>
+  </footer>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Teléfono / WhatsApp *</label>
-                            <input type="tel" required placeholder="Ej: 0414-1234567" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-sm text-white focus:outline-none focus:border-comuna-gold">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Tipo de Solicitud *</label>
-                            <select id="form-type" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-sm text-white focus:outline-none focus:border-comuna-gold">
-                                <option value="mediacion">Mediación o Convivencia Comunal (Justicia de Paz)</option>
-                                <option value="clap">Reporte / Petición Soberanía Alimentaria (CLAP)</option>
-                                <option value="proyecto">Propuesta de Proyecto Socioproductivo</option>
-                                <option value="contraloria">Sugerencia o Contraloría Social</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Detalle del Caso o Solicitud *</label>
-                        <textarea required rows="4" placeholder="Describa brevemente la situación, propuesta o caso que requiere atención de la vocería o del Juez de Paz..." class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-sm text-white focus:outline-none focus:border-comuna-gold"></textarea>
-                    </div>
-
-                    <div class="pt-2">
-                        <button type="submit" class="w-full bg-comuna-gold hover:bg-amber-600 text-slate-950 font-extrabold py-3.5 rounded-lg text-xs uppercase tracking-wider transition-all shadow-lg flex items-center justify-center gap-2">
-                            <i class="fas fa-paper-plane"></i> Registrar Solicitud en Sistema Comunal
-                        </button>
-                    </div>
-
-                </form>
-
-                <div id="form-alert" class="hidden mt-4 p-4 bg-emerald-900/50 border border-emerald-500 rounded-lg text-emerald-200 text-xs text-center font-medium">
-                    <i class="fas fa-check-circle text-emerald-400 mr-1"></i> ¡Solicitud registrada exitosamente! Se le ha asignado el código de seguimiento <span id="ticket-id" class="font-bold text-white font-mono">#COM-2026-8842</span>. Un vocero se pondrá en contacto.
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Institucional -->
-    <footer class="bg-slate-950 text-slate-400 py-12 border-t-4 border-comuna-red text-xs">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                
-                <div class="space-y-3 md:col-span-1">
-                    <div class="flex items-center space-x-2 text-white">
-                        <div class="w-8 h-8 bg-comuna-red rounded-full flex items-center justify-center text-sm font-bold">
-                            <i class="fas fa-users-rays"></i>
-                        </div>
-                        <span class="font-bold font-serif text-sm">Comuna Socialista La Paz</span>
-                    </div>
-                    <p class="text-slate-400">
-                        Instancia de autogestión territorial, desarrollo integral y poder popular organizado.
-                    </p>
-                    <div class="pt-1">
-                        <span class="inline-block bg-slate-800 px-2.5 py-1 rounded text-slate-300 font-mono text-[11px] font-bold border border-slate-700">RIF: J-410244623</span>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-xs">Marco Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-comuna-gold transition-colors">Ley Orgánica de las Comunas</a></li>
-                        <li><a href="#" class="hover:text-comuna-gold transition-colors">Ley Orgánica del Poder Popular</a></li>
-                        <li><a href="#" class="hover:text-comuna-gold transition-colors">Ley de Jurisdicción de Paz Comunal</a></li>
-                        <li><a href="#" class="hover:text-comuna-gold transition-colors">Ley del Sistema Económico Comunal</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-xs">Enlaces Rápidos</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#resoluciones" class="hover:text-comuna-gold transition-colors">Resoluciones de Asamblea</a></li>
-                        <li><a href="#estructura" class="hover:text-comuna-gold transition-colors">Banco de la Comuna</a></li>
-                        <li><a href="#justicia" class="hover:text-comuna-gold transition-colors">Justicia y Paz Comunal</a></li>
-                        <li><a href="#calculadora" class="hover:text-comuna-gold transition-colors">Simulador Proyectos</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-xs">Atención Presencial</h4>
-                    <p class="mb-2"><i class="fas fa-map-marker-alt text-comuna-gold mr-1.5"></i> Sede del Banco de la Comuna La Paz, Estado Bolivariano de Venezuela.</p>
-                    <p class="mb-2"><i class="fas fa-clock text-comuna-gold mr-1.5"></i> Atención: Lunes a Viernes (8:00 AM - 4:00 PM)</p>
-                    <p><i class="fas fa-envelope text-comuna-gold mr-1.5"></i> despacho.comuna.lapaz@gob.ve</p>
-                </div>
-
-            </div>
-
-            <div class="border-t border-slate-800 pt-6 text-center text-slate-500 text-[11px]">
-                <p>© 2026 Comuna Socialista La Paz (RIF: J-410244623). Todos los derechos reservados. Impulsado por la Asamblea de Ciudadanos y Ciudadanas.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal: Detalle de Resoluciones -->
-    <div id="res-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative border border-slate-200">
-            <button onclick="closeResolutionModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl p-1">
-                <i class="fas fa-times"></i>
-            </button>
-            <div id="res-modal-content">
-                <!-- Injected via JS -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal: Detalle de Competencias Orgánicas -->
-    <div id="details-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
-            <button onclick="closeDetailsModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl p-1">
-                <i class="fas fa-times"></i>
-            </button>
-            <div id="details-modal-content">
-                <!-- Injected via JS -->
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu on clicking links
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Resolution Data
-        const resolutionsData = {
-            '012': {
-                title: 'Resolución CLAP 012 - Acreditación de Secretaría & Compra de Insumos Médicos',
-                date: '21 de Abril de 2021',
-                organo: 'Consejo Socialista de Economía Comunal / Banco de la Comuna',
-                rif: 'J-410244623',
-                content: `
-                    <div class="space-y-4 text-xs text-slate-700">
-                        <div class="bg-slate-100 p-3 rounded font-mono text-[11px] border-l-4 border-comuna-red">
-                            <strong>REPÚBLICA BOLIVARIANA DE VENEZUELA</strong><br>
-                            ASAMBLEA EXTRAORDINARIA DE CIUDADANOS Y CIUDADANAS<br>
-                            COMUNA SOCIALISTA LA PAZ (RIF: J-410244623)
-                        </div>
-                        <h4 class="font-bold text-slate-900 text-sm">PUNTOS DE RESOLUCIÓN APROBADOS:</h4>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li><strong>Acreditación de Representación:</strong> Designación formal del ciudadano <strong>Marco Antonio Nieves García (C.I. V-17.004.376)</strong> como Secretario de la Magistratura de Economía Comunal.</li>
-                            <li><strong>Gestión Financiera Sanitaria:</strong> Facultad expresa para administrar y disponer de los fondos financieros nacionales asignados para la adquisición e importación de vacunas y equipamiento médico contra el virus COVID-19.</li>
-                            <li><strong>Convenios de Cooperación:</strong> Coordinación comunitaria de producción y asignación sanitaria orientada a la protección de la salud colectiva e insumos en el marco de la salud comunitaria.</li>
-                        </ul>
-                    </div>
-                `
-            },
-            '013': {
-                title: 'Resolución CLAP 013 - Jurisdicción de Paz & Mediación de Derechos Indígenas',
-                date: '02 de Mayo de 2021',
-                organo: 'Jurisdicción Especial de Paz Comunal',
-                rif: 'J-410244623',
-                content: `
-                    <div class="space-y-4 text-xs text-slate-700">
-                        <div class="bg-slate-100 p-3 rounded font-mono text-[11px] border-l-4 border-comuna-gold">
-                            <strong>REPÚBLICA BOLIVARIANA DE VENEZUELA</strong><br>
-                            ASAMBLEA EXTRAORDINARIA DE CIUDADANOS Y CIUDADANAS<br>
-                            COMUNA SOCIALISTA LA PAZ (RIF: J-410244623)
-                        </div>
-                        <h4 class="font-bold text-slate-900 text-sm">PUNTOS DE RESOLUCIÓN APROBADOS:</h4>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li><strong>Designación Judicial Comunal:</strong> Designación formal del ciudadano <strong>Marco Antonio Nieves García (C.I. V-17.004.376)</strong> en el cargo de Juez de la Jurisdicción Especial de Justicia de Paz Comunal.</li>
-                            <li><strong>Mediación de Derechos Originarios:</strong> Facultad para llevar representación y mediación ante las instancias gubernamentales de la República Argentina respecto a solicitudes de pueblos originarios y comunidades indígenas del continente (Abya Yala).</li>
-                            <li><strong>Defensa de DDHH:</strong> Orientación en la reivindicación de derechos territoriales, preservación cultural y salvaguarda de los Derechos Humanos colectivos.</li>
-                        </ul>
-                    </div>
-                `
-            },
-            '008': {
-                title: 'Acta Comunal 008 - Plan de Abastecimiento Territorial y Patios Productivos',
-                date: '15 de Noviembre de 2023',
-                organo: 'Banco de la Comuna & Vocería de Economía',
-                rif: 'J-410244623',
-                content: `
-                    <div class="space-y-4 text-xs text-slate-700">
-                        <div class="bg-slate-100 p-3 rounded font-mono text-[11px] border-l-4 border-comuna-blue">
-                            <strong>REPÚBLICA BOLIVARIANA DE VENEZUELA</strong><br>
-                            ASAMBLEA GENERAL COMUNAL
-                        </div>
-                        <h4 class="font-bold text-slate-900 text-sm">PUNTOS DE RESOLUCIÓN APROBADOS:</h4>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Aprobación del cronograma trimestral de distribución de combos de alimentación CLAP.</li>
-                            <li>Financiamiento inicial para 25 patios productivos familiares dedicados a la siembra de hortalizas y cereales.</li>
-                            <li>Creación del fondo comunal de mantenimiento de la red de agua potable.</li>
-                        </ul>
-                    </div>
-                `
-            }
-        };
-
-        // Open Resolution Modal
-        function openResolutionModal(id) {
-            const data = resolutionsData[id];
-            if(!data) return;
-
-            const modalContent = document.getElementById('res-modal-content');
-            modalContent.innerHTML = `
-                <div class="border-b border-slate-200 pb-4 mb-4">
-                    <span class="text-[11px] font-bold text-comuna-red uppercase tracking-wider block">${data.organo}</span>
-                    <h3 class="text-lg font-bold text-slate-900 font-serif mt-1">${data.title}</h3>
-                    <div class="flex items-center gap-3 mt-2 text-xs text-slate-500 font-medium">
-                        <span><i class="far fa-calendar-alt mr-1"></i>${data.date}</span>
-                        <span>•</span>
-                        <span class="font-mono bg-slate-100 px-2 py-0.5 rounded">RIF: ${data.rif}</span>
-                    </div>
-                </div>
-                ${data.content}
-                <div class="mt-6 pt-4 border-t border-slate-200 flex justify-end gap-3">
-                    <button onclick="closeResolutionModal()" class="bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold px-4 py-2 rounded-lg">Cerrar</button>
-                    <button onclick="alert('Descargando copia certificada en formato PDF...')" class="bg-comuna-red hover:bg-comuna-red-dark text-white text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-1">
-                        <i class="fas fa-file-pdf"></i> Descargar PDF Certificado
-                    </button>
-                </div>
-            `;
-
-            document.getElementById('res-modal').classList.remove('hidden');
-        }
-
-        function closeResolutionModal() {
-            document.getElementById('res-modal').classList.add('hidden');
-        }
-
-        // Filter resolutions
-        function filterResolutions() {
-            const query = document.getElementById('search-input').value.toLowerCase();
-            const cards = document.querySelectorAll('.resolution-card');
-
-            cards.forEach(card => {
-                const text = card.innerText.toLowerCase();
-                if(text.includes(query)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Details Modal for Organs
-        const organDetails = {
-            'banco': {
-                title: 'Consejo Socialista de Economía Comunal / Banco de la Comuna',
-                text: 'El Banco de la Comuna es la unidad de gestión financiera encargada de administrar los recursos asignados, transferidos o generados por la Comuna. Sus atribuciones abarcan la compra de insumos sanitarios de alto impacto, financiamiento a proyectos socioproductivos, gestión del presupuesto participativo y promoción del trueque comunitario y la soberanía alimentaria.'
-            },
-            'justicia': {
-                title: 'Jurisdicción Especial de Justicia de Paz Comunal',
-                text: 'Instancia encargada del arbitraje, mediación y resolución de conflictos dentro del ámbito territorial comunal. Promueve el entendimiento mutuo, vela por el cumplimiento de los acuerdos de convivencia y cuenta con competencias de mediación en el plano de derechos humanos, territoriales e indígenas.'
-            },
-            'magistratura': {
-                title: 'Secretaría de Magistratura y Contraloría Social',
-                text: 'Órgano de contraloría encargada de la fiscalización, auditoría y control de la inversión comunal. Certifica la validez de los actos asamblearios, custodia el archivo documental oficial y asegura la rendición pública de cuentas periódica ante la comunidad.'
-            }
-        };
-
-        function showDetailsModal(type) {
-            const item = organDetails[type];
-            if(!item) return;
-
-            document.getElementById('details-modal-content').innerHTML = `
-                <h3 class="text-xl font-bold text-slate-900 font-serif mb-3">${item.title}</h3>
-                <p class="text-xs text-slate-600 leading-relaxed mb-6">${item.text}</p>
-                <div class="text-right">
-                    <button onclick="closeDetailsModal()" class="bg-comuna-red text-white text-xs font-bold px-4 py-2 rounded-lg">Entendido</button>
-                </div>
-            `;
-            document.getElementById('details-modal').classList.remove('hidden');
-        }
-
-        function closeDetailsModal() {
-            document.getElementById('details-modal').classList.add('hidden');
-        }
-
-        // Project Calculator Logic
-        function calculateProject() {
-            const type = document.getElementById('sim-type').value;
-            const families = parseInt(document.getElementById('sim-families').value);
-            const months = parseInt(document.getElementById('sim-months').value);
-
-            document.getElementById('sim-families-val').innerText = `${families} Familias`;
-            document.getElementById('sim-months-val').innerText = `${months} Meses`;
-
-            let costPerFamilyBase = 10;
-            let workerRatio = 0.08;
-
-            if(type === 'agricola') costPerFamilyBase = 12;
-            if(type === 'salud') costPerFamilyBase = 25;
-            if(type === 'infraestructura') costPerFamilyBase = 45;
-            if(type === 'alimentos') costPerFamilyBase = 18;
-
-            const totalBudget = Math.round(families * costPerFamilyBase * (1 + (months * 0.05)));
-            const perFamily = (totalBudget / families).toFixed(2);
-            const workers = Math.max(3, Math.round(families * workerRatio));
-
-            document.getElementById('res-budget').innerText = `$${totalBudget.toLocaleString()} USD`;
-            document.getElementById('res-per-family').innerText = `$${perFamily} USD`;
-            document.getElementById('res-jobs').innerText = `${workers} Voceros`;
-        }
-
-        function downloadSimulationPDF() {
-            alert('Su anteproyecto ha sido pre-registrado en el sistema. Puede presentar el resumen impreso en la próxima Asamblea Comunitaria.');
-        }
-
-        // Form Submit Handler
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const alertBox = document.getElementById('form-alert');
-            const randomCode = Math.floor(1000 + Math.random() * 9000);
-            document.getElementById('ticket-id').innerText = `#COM-2026-${randomCode}`;
-            
-            alertBox.classList.remove('hidden');
-            document.getElementById('contact-form').reset();
-            
-            setTimeout(() => {
-                alertBox.scrollIntoView({ behavior: 'smooth' });
-            }, 100);
-        }
-
-        // Initial Calculation on Load
-        calculateProject();
-    </script>
 </body>
 </html>
