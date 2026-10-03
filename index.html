@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comuna Socialista La Paz - Estado Comunal ABYA YALA</title>
+  <style>
+    :root {
+      --primary: #8b0000;
+      --secondary: #d4af37;
+      --dark: #1a1a1a;
+      --light: #f4f4f9;
+      --accent: #003366;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), #5a0000);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom: 4px solid var(--secondary);
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: var(--secondary);
+      font-weight: bold;
+    }
+    nav {
+      background-color: var(--dark);
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: var(--secondary);
+      color: var(--dark);
+    }
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-left: 5px solid var(--primary);
+    }
+    .card h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .badge {
+      display: inline-block;
+      background-color: var(--secondary);
+      color: var(--dark);
+      padding: 4px 8px;
+      font-weight: bold;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+    .resoluciones-list {
+      list-style: none;
+    }
+    .resoluciones-list li {
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+    }
+    .resoluciones-list li:last-child {
+      border-bottom: none;
+    }
+    .resoluciones-list strong {
+      color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--dark);
+      color: white;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Comuna Socialista La Paz</h1>
+    <p>RIF: J-410244623 | Estado Comunal ABYA YALA</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#institucional">Institucional</a>
+    <a href="#resoluciones">Resoluciones CLAP</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="inicio" class="card">
+      <span class="badge">Autogobierno Comunal</span>
+      <h2>Consejo Socialista de Economía Comunal</h2>
+      <p>Bienvenido al portal oficial de la Comuna Socialista La Paz. Espacio destinado al fortalecimiento del Poder Popular, la soberanía económica y el desarrollo endógeno participativo.</p>
+    </section>
+
+    <section id="institucional" class="card">
+      <h2>Estructura Orgánica & Jurisdicción</h2>
+      <ul>
+        <li><strong>Banco de la Comuna:</strong> Órgano de gestión financiera comunal y desarrollo socioproductivo.</li>
+        <li><strong>Jurisdicción Especial de Paz Comunal:</strong> Instancia comunitaria para la conciliación, arbitraje y convivencia pacífica.</li>
+        <li><strong>Magistratura de Economía Comunal:</strong> Secretaría de control social y regulación económica.</li>
+      </ul>
+    </section>
+
+    <section id="resoluciones" class="card">
+      <h2>Resoluciones Oficiales aprobadas en Asamblea</h2>
+      <ul class="resoluciones-list">
+        <li>
+          <strong>Resolución CLAP 011:</strong> Sentencia y reorganización de la estructura de paz regional.
+        </li>
+        <li>
+          <strong>Resolución CLAP 012:</strong> Autorización para la gestión de salud, vacunas e insumos médicos, y estabilización económica comunal.
+        </li>
+        <li>
+          <strong>Resolución CLAP 013:</strong> Mediación y representación para la reivindicación de derechos de los pueblos originarios de ABYA YALA.
+        </li>
+        <li>
+          <strong>Resolución CLAP 014:</strong> Aprobación del Plan Comunal de Desarrollo y puesta en marcha de la plataforma financiera digital.
+        </li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="card">
+      <h2>Atención al Ciudadano</h2>
+      <p>Para solicitudes de mediación, proyectos comunitarios o consultas de asamblea, diríjase a la sede del Consejo de Economía Comunal.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; Comuna Socialista La Paz — Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
